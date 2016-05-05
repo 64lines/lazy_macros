@@ -30,6 +30,6 @@ def lazy_macros():
 		if macro_type == "search":
 			search_macro(object_name)
 		else:
-			print macro_list[macro_type] % object_name
+			print macro_list[macro_type].format(object_name)
 	
 lazy_macros()	

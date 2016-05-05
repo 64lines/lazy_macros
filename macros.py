@@ -3,33 +3,33 @@ macro_list = {
 #---------------------------------
 "flex_void_public_function": 
 """
-public function %s():void
-{	
+public function {0}(var number:int, var text:String):void
+{
 }
 """,
 #---------------------------------
 "flex_void_private_function":
 """
-private function %s():void
-{	
+private function {0}(var number:int, var text:String):void
+{
 }
 """,
 #---------------------------------
 "java_void_public_function":
 """
-public void %s()
-{	
+public void {0}(int number, String text)
+{
 }
 """,
 #---------------------------------
 "java_void_private_function":
 """
-private void %s()
-{	
+private void {0}(int number, String text)
+{
 }
 """,
 #---------------------------------
-"html_bootstrap":
+"html_bootstrap_jquery":
 """
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,7 @@ private void %s()
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>%s</title>
+    <title>{0}</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@ private void %s()
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>{0}</h1>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -59,5 +59,24 @@ private void %s()
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+""",
+#---------------------------------
+"bash_user_interface_menu":
+"""
+#!/bin/bash
+
+# {0}
+OPTIONS="Hello Quit"
+select opt in $OPTIONS; do
+   if [ "$opt" = "Quit" ]; then
+	echo done
+	exit
+   elif [ "$opt" = "Hello" ]; then
+	echo Hello World
+   else
+	clear
+	echo bad option
+   fi
+done
 """,
 }
